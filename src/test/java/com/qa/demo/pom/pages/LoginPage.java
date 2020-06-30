@@ -3,11 +3,8 @@ package com.qa.demo.pom.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage {
-
-	public final String URL = "http://thedemosite.co.uk/login.php";
+public class LoginPage extends WebPage {
 
 	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/table/tbody/tr[1]/td[2]/p/input")
 	private WebElement username;
@@ -22,8 +19,7 @@ public class LoginPage {
 	private WebElement result;
 
 	public LoginPage(WebDriver driver) {
-		driver.get(URL);
-		PageFactory.initElements(driver, this);
+		super(driver, "http://thedemosite.co.uk/login.php");
 	}
 
 	public String login(String user, String pass) {

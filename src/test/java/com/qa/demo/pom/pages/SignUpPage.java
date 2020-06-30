@@ -3,11 +3,8 @@ package com.qa.demo.pom.pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
 
-public class SignUpPage {
-
-	public final String URL = "http://thedemosite.co.uk/addauser.php";
+public class SignUpPage extends WebPage {
 
 	@FindBy(xpath = "/html/body/table/tbody/tr/td[1]/form/div/center/table/tbody/tr/td[1]/div/center/table/tbody/tr[1]/td[2]/p/input")
 	private WebElement username;
@@ -19,8 +16,7 @@ public class SignUpPage {
 	private WebElement submit;
 
 	public SignUpPage(WebDriver driver) {
-		driver.get(URL);
-		PageFactory.initElements(driver, this);
+		super(driver, "http://thedemosite.co.uk/addauser.php");
 	}
 
 	public void login(String user, String pass) {

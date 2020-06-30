@@ -12,14 +12,14 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import com.qa.demo.pom.pages.LoginPage;
 import com.qa.demo.pom.pages.SignUpPage;
 
-public class Ex1Test {
+public class DemoPOM {
 
 	private RemoteWebDriver driver;
 
 	@Before
 	public void init() {
 		ChromeOptions opts = new ChromeOptions();
-//		opts.setHeadless(true);
+		opts.setHeadless(true);
 		this.driver = new ChromeDriver(opts);
 		this.driver.manage().window().maximize();
 	}
