@@ -41,7 +41,7 @@ public class DemoPOM {
 	@Before
 	public void init() {
 		ChromeOptions opts = new ChromeOptions();
-		opts.setHeadless(false);
+		opts.setHeadless(true);
 		this.driver = new ChromeDriver(opts);
 		this.driver.manage().window().maximize();
 	}
@@ -67,7 +67,7 @@ public class DemoPOM {
 
 		File srcFile = driver.getScreenshotAs(OutputType.FILE);
 
-		final String scrShotPath = "test-output" + File.pathSeparator + "screenshots" + File.pathSeparator + "test.png";
+		final String scrShotPath = "test-output" + File.separator + "screenshots" + File.separator + "test.png";
 		File targetFile = new File(scrShotPath);
 		Files.copy(srcFile.toPath(), new FileOutputStream(targetFile));
 
