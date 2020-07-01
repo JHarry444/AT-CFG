@@ -1,4 +1,4 @@
-package com.qa.demo.pom.pages;
+package com.qa.demo.extent.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

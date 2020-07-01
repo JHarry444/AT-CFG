@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class Ex1Test {
@@ -15,7 +16,9 @@ public class Ex1Test {
 
 	@Before
 	public void init() {
-		this.driver = new ChromeDriver();
+		ChromeOptions opts = new ChromeOptions();
+		opts.setHeadless(true);
+		this.driver = new ChromeDriver(opts);
 	}
 
 	@Test
