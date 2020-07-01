@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import cucumber.api.java.After;
@@ -18,7 +19,9 @@ public class StepDefinition {
 
 	@Before
 	public void init() {
-		this.driver = new ChromeDriver();
+		ChromeOptions opts = new ChromeOptions();
+		opts.setHeadless(true);
+		this.driver = new ChromeDriver(opts);
 	}
 
 	@Given("^I have an account with \"([^\"]*)\" and \"([^\"]*)\"$")
