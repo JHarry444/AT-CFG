@@ -19,7 +19,7 @@ public class SignUpPage extends WebPage {
 		super(driver, "http://thedemosite.co.uk/addauser.php");
 	}
 
-	public void login(String user, String pass) {
+	public void createUser(String user, String pass) {
 		this.username.sendKeys(user);
 		this.password.sendKeys(pass);
 		this.submit.click();
