@@ -1,4 +1,4 @@
-package com.qa.demo.pom;
+package com.qa.demo.extent;
 
 import static org.junit.Assert.fail;
 
@@ -21,10 +21,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-import com.qa.demo.pom.pages.LoginPage;
-import com.qa.demo.pom.pages.SignUpPage;
+import com.qa.demo.extent.pages.LoginPage;
+import com.qa.demo.extent.pages.SignUpPage;
 
-public class DemoPOM {
+public class SanityTest {
 
 	private RemoteWebDriver driver;
 
